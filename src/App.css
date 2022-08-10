@@ -1,3 +1,9 @@
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
   background-color: cadetblue;
@@ -6,6 +12,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.score {
+  margin-top: 12px;
 }
 
 .playarea {
