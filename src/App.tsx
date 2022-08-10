@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <div className="contents-container">
         <h1>Aim Trainer</h1>
+        <div className="playarea"></div>
       </div>
     </div>
   );
