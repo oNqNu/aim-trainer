@@ -18,3 +18,10 @@
   min-width: 500px;
   background-color: white;
 }
+
+.targetItem {
+  background-color: brown;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
