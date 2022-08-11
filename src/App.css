@@ -61,3 +61,17 @@ h2 {
   display: inline-block;
   margin-left: 20px;
 }
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50% - 80px;
+  left: 50% - 150px;
+  height: 160px;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background-color: rgba(77, 97, 207, 0.5);
+}

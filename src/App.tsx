@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [score, setScore] = useState(0);
+  const isDisplayResult = true;
 
   return (
     <div className="App">
@@ -25,6 +26,10 @@ function App() {
         </div>
         <button onClick={() => setScore(score + 1)}>+++</button>
         <button onClick={() => setScore(0)}>Reset</button>
+      </div>
+      <div className="result-container">
+        <h1>結果発表</h1>
+        <h2>Score: 300点</h2>
       </div>
     </div>
   );
