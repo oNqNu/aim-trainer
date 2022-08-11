@@ -31,11 +31,33 @@ h2 {
   min-height: 300px;
   min-width: 500px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.targetItem {
+.targetItem1 {
   background-color: brown;
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  display: inline-block;
+}
+
+.targetItem2 {
+  background-color: rgb(32, 171, 48);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.targetItem3 {
+  background-color: rgb(78, 20, 154);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 20px;
 }

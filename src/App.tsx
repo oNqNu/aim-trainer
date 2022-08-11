@@ -10,7 +10,18 @@ function App() {
         <h1 className="title">Aim Trainer</h1>
         <h2 className="score">Score: {score}</h2>
         <div className="playarea">
-          <div className="targetItem" onClick={() => setScore(score + 1)}></div>
+          <div
+            className="targetItem1"
+            onClick={() => setScore(score + 1)}
+          ></div>
+          <div
+            className="targetItem2"
+            onClick={() => setScore(score + 2)}
+          ></div>
+          <div
+            className="targetItem3"
+            onClick={() => setScore(score + 3)}
+          ></div>
         </div>
         <button onClick={() => setScore(score + 1)}>+++</button>
         <button onClick={() => setScore(0)}>Reset</button>
