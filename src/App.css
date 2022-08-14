@@ -3,6 +3,11 @@ h2 {
   margin: 0;
   padding: 0;
 }
+button {
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+}
 
 .App {
   text-align: center;
@@ -20,6 +25,12 @@ h2 {
 
 .score {
   margin-top: 12px;
+}
+.contents-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .playarea {
@@ -60,6 +71,11 @@ h2 {
   border-radius: 50%;
   display: inline-block;
   margin-left: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
 }
 
 .result-container {

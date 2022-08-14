@@ -24,8 +24,14 @@ function App() {
             onClick={() => setScore(score + 3)}
           ></div>
         </div>
-        <button onClick={() => setScore(score + 1)}>+++</button>
-        <button onClick={() => setScore(0)}>Reset</button>
+        <div className="button-container">
+          <button className="plusButton" onClick={() => setScore(score + 1)}>
+            +++
+          </button>
+          <button className="resetButton" onClick={() => setScore(0)}>
+            Reset
+          </button>
+        </div>
       </div>
       <div className="result-container">
         <h1>結果発表</h1>
