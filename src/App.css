@@ -90,5 +90,6 @@ button {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(8px);
-  background-color: rgba(77, 97, 207, 0.5);
+  background-color: rgba(129, 136, 177, 0.5);
+  border-radius: 20px;
 }

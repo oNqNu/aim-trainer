@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const [score, setScore] = useState(0);
-  const isDisplayResult = true;
+  const [isDisplayResult, SetIsDisplayResult] = useState(false);
 
   return (
     <div className="App">
@@ -25,18 +25,36 @@ function App() {
           ></div>
         </div>
         <div className="button-container">
-          <button className="plusButton" onClick={() => setScore(score + 1)}>
-            +++
-          </button>
-          <button className="resetButton" onClick={() => setScore(0)}>
-            Reset
-          </button>
+          {!isDisplayResult ? (
+            <>
+              <button className="resetButton" onClick={() => setScore(0)}>
+                Reset
+              </button>
+              <button
+                className="display-result-button"
+                onClick={() => SetIsDisplayResult(true)}
+              >
+                結果表示
+              </button>
+            </>
+          ) : null}
         </div>
       </div>
-      <div className="result-container">
-        <h1>結果発表</h1>
-        <h2>Score: 300点</h2>
-      </div>
+      {isDisplayResult ? (
+        <div className="result-container">
+          <h1>結果発表</h1>
+          <h2>Score: {score}点</h2>
+          <button
+            className="confirmed-result-button"
+            onClick={() => {
+              SetIsDisplayResult(false);
+              setScore(0);
+            }}
+          >
+            OK
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }
