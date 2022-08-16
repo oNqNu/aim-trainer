@@ -5,6 +5,9 @@ function App() {
   const [score, setScore] = useState(0);
   const [isDisplayResult, SetIsDisplayResult] = useState(false);
   const [activatedTarget, SetActivatedTarget] = useState('t1');
+  const changeTarget = () => {
+    SetActivatedTarget(`t${Math.floor(Math.random() * (4 - 1)) + 1}`);
+  };
 
   return (
     <div className="App">
@@ -15,19 +18,28 @@ function App() {
           {activatedTarget === 't1' && (
             <div
               className="targetItem1"
-              onClick={() => setScore(score + 1)}
+              onClick={() => {
+                setScore(score + 1);
+                changeTarget();
+              }}
             ></div>
           )}
           {activatedTarget === 't2' && (
             <div
               className="targetItem2"
-              onClick={() => setScore(score + 2)}
+              onClick={() => {
+                setScore(score + 2);
+                changeTarget();
+              }}
             ></div>
           )}
           {activatedTarget === 't3' && (
             <div
               className="targetItem3"
-              onClick={() => setScore(score + 3)}
+              onClick={() => {
+                setScore(score + 3);
+                changeTarget();
+              }}
             ></div>
           )}
         </div>
