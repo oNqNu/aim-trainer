@@ -26,7 +26,13 @@ function App() {
       <div className="contents-container">
         <h1 className="title">Aim Trainer</h1>
         <h2 className="score">Score: {score}</h2>
-        <div className="playarea">
+        <div
+          className="playarea"
+          onClick={() => {
+            changeTargetPosition();
+            changeTarget();
+          }}
+        >
           {activatedTarget === 't1' && (
             <div
               className="targetItem1"
