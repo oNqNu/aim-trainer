@@ -16,8 +16,8 @@ function App() {
 
   const changeTargetPosition = () => {
     SetTargetPosition({
-      top: `${Math.floor(Math.random() * (100 - 0)) + 0}%`,
-      left: `${Math.floor(Math.random() * (100 - 0)) + 0}%`,
+      top: `${Math.floor(Math.random() * (90 - 0)) + 0}%`,
+      left: `${Math.floor(Math.random() * (90 - 0)) + 0}%`,
     });
   };
 
