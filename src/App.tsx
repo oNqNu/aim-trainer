@@ -5,8 +5,20 @@ function App() {
   const [score, setScore] = useState(0);
   const [isDisplayResult, SetIsDisplayResult] = useState(false);
   const [activatedTarget, SetActivatedTarget] = useState('t1');
+  const [targetPosition, SetTargetPosition] = useState({
+    top: '50%',
+    left: '50%',
+  });
+
   const changeTarget = () => {
     SetActivatedTarget(`t${Math.floor(Math.random() * (4 - 1)) + 1}`);
+  };
+
+  const changeTargetPosition = () => {
+    SetTargetPosition({
+      top: `${Math.floor(Math.random() * (100 - 0)) + 0}%`,
+      left: `${Math.floor(Math.random() * (100 - 0)) + 0}%`,
+    });
   };
 
   return (
@@ -20,6 +32,7 @@ function App() {
               className="targetItem1"
               onClick={() => {
                 setScore(score + 1);
+                changeTargetPosition();
                 changeTarget();
               }}
             ></div>
@@ -29,6 +42,7 @@ function App() {
               className="targetItem2"
               onClick={() => {
                 setScore(score + 2);
+                changeTargetPosition();
                 changeTarget();
               }}
             ></div>
@@ -38,6 +52,7 @@ function App() {
               className="targetItem3"
               onClick={() => {
                 setScore(score + 3);
+                changeTargetPosition();
                 changeTarget();
               }}
             ></div>
