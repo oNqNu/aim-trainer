@@ -45,6 +45,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .targetItem1 {
@@ -53,6 +54,7 @@ button {
   width: 30px;
   border-radius: 50%;
   display: inline-block;
+  position: absolute;
 }
 
 .targetItem2 {
@@ -61,6 +63,7 @@ button {
   width: 24px;
   border-radius: 50%;
   display: inline-block;
+  position: absolute;
 }
 
 .targetItem3 {
@@ -69,6 +72,7 @@ button {
   width: 16px;
   border-radius: 50%;
   display: inline-block;
+  position: absolute;
 }
 
 .button-container {
