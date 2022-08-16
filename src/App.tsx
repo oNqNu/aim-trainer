@@ -30,6 +30,7 @@ function App() {
           {activatedTarget === 't1' && (
             <div
               className="targetItem1"
+              style={targetPosition}
               onClick={() => {
                 setScore(score + 1);
                 changeTargetPosition();
@@ -40,6 +41,7 @@ function App() {
           {activatedTarget === 't2' && (
             <div
               className="targetItem2"
+              style={targetPosition}
               onClick={() => {
                 setScore(score + 2);
                 changeTargetPosition();
@@ -50,6 +52,7 @@ function App() {
           {activatedTarget === 't3' && (
             <div
               className="targetItem3"
+              style={targetPosition}
               onClick={() => {
                 setScore(score + 3);
                 changeTargetPosition();
