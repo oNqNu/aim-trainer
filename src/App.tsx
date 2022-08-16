@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [score, setScore] = useState(0);
   const [isDisplayResult, SetIsDisplayResult] = useState(false);
+  const [activatedTarget, SetActivatedTarget] = useState('t1');
 
   return (
     <div className="App">
@@ -11,18 +12,24 @@ function App() {
         <h1 className="title">Aim Trainer</h1>
         <h2 className="score">Score: {score}</h2>
         <div className="playarea">
-          <div
-            className="targetItem1"
-            onClick={() => setScore(score + 1)}
-          ></div>
-          <div
-            className="targetItem2"
-            onClick={() => setScore(score + 2)}
-          ></div>
-          <div
-            className="targetItem3"
-            onClick={() => setScore(score + 3)}
-          ></div>
+          {activatedTarget === 't1' && (
+            <div
+              className="targetItem1"
+              onClick={() => setScore(score + 1)}
+            ></div>
+          )}
+          {activatedTarget === 't2' && (
+            <div
+              className="targetItem2"
+              onClick={() => setScore(score + 2)}
+            ></div>
+          )}
+          {activatedTarget === 't3' && (
+            <div
+              className="targetItem3"
+              onClick={() => setScore(score + 3)}
+            ></div>
+          )}
         </div>
         <div className="button-container">
           {!isDisplayResult ? (
