@@ -21,6 +21,12 @@ function App() {
     });
   };
 
+  const hundleClickTarget = (point: number) => {
+    setScore(score + point);
+    changeTargetPosition();
+    changeTarget();
+  };
+
   return (
     <div className="App">
       <div className="contents-container">
@@ -38,9 +44,7 @@ function App() {
               className="targetItem1"
               style={targetPosition}
               onClick={() => {
-                setScore(score + 1);
-                changeTargetPosition();
-                changeTarget();
+                hundleClickTarget(1);
               }}
             ></div>
           )}
@@ -49,9 +53,7 @@ function App() {
               className="targetItem2"
               style={targetPosition}
               onClick={() => {
-                setScore(score + 2);
-                changeTargetPosition();
-                changeTarget();
+                hundleClickTarget(2);
               }}
             ></div>
           )}
@@ -60,9 +62,7 @@ function App() {
               className="targetItem3"
               style={targetPosition}
               onClick={() => {
-                setScore(score + 3);
-                changeTargetPosition();
-                changeTarget();
+                hundleClickTarget(3);
               }}
             ></div>
           )}
