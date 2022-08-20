@@ -87,8 +87,8 @@ button {
   position: fixed;
   top: 50% - 80px;
   left: 50% - 150px;
-  height: 160px;
-  width: 300px;
+  height: 300px;
+  width: 500px;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(8px);
