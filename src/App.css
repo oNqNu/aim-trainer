@@ -4,9 +4,20 @@ h2 {
   padding: 0;
 }
 button {
-  height: 40px;
-  width: 80px;
+  height: 48px;
+  width: 120px;
   border-radius: 10px;
+  background-color: rgba(63, 63, 229, 0.854);
+  border: 2px solid rgba(63, 63, 229, 0.854);
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+button:hover {
+  background-color: white;
+  color: rgba(63, 63, 229, 0.854);
 }
 
 .App {
