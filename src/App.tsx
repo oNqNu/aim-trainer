@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import { MyButton } from './components/Mybutton/MyButton';
+
 function App() {
   const [score, setScore] = useState(0);
   const [isDisplayResult, SetIsDisplayResult] = useState(false);
