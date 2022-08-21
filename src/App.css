@@ -2,13 +2,15 @@ h1,
 h2 {
   margin: 0;
   padding: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
 }
 button {
   height: 48px;
   width: 120px;
   border-radius: 10px;
-  background-color: rgba(63, 63, 229, 0.854);
-  border: 2px solid rgba(63, 63, 229, 0.854);
+  background-color: rgb(30, 168, 15);
+  border: 3px solid rgb(30, 168, 15);
   color: white;
   font-weight: bold;
   font-size: large;
@@ -17,12 +19,12 @@ button {
 
 button:hover {
   background-color: white;
-  color: rgba(63, 63, 229, 0.854);
+  color: rgb(30, 168, 15);
 }
 
 .App {
   text-align: center;
-  background-color: rgb(157, 211, 213);
+  background-color: rgb(60, 64, 65);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -103,7 +105,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(8px);
-  background-color: rgba(129, 136, 177, 0.5);
+  background-color: rgba(0, 0, 0, 0.805);
   border-radius: 20px;
 }
 
