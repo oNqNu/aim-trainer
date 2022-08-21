@@ -106,3 +106,7 @@ button:hover {
   background-color: rgba(129, 136, 177, 0.5);
   border-radius: 20px;
 }
+
+.confirmed-result-button {
+  margin-top: 12px;
+}
