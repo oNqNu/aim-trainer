@@ -72,15 +72,10 @@ function App() {
         <div className="button-container">
           {!isDisplayResult ? (
             <>
-              <button className="resetButton" onClick={() => setScore(0)}>
-                Reset
-              </button>
-              <button
-                className="display-result-button"
-                onClick={() => SetIsDisplayResult(true)}
-              >
+              <MyButton onClick={() => setScore(0)}>reset</MyButton>
+              <MyButton onClick={() => SetIsDisplayResult(true)}>
                 結果表示
-              </button>
+              </MyButton>
             </>
           ) : null}
         </div>
@@ -89,15 +84,14 @@ function App() {
         <div className="result-container">
           <h1>結果発表</h1>
           <h2>Score: {score}点</h2>
-          <button
-            className="confirmed-result-button"
+          <MyButton
             onClick={() => {
               SetIsDisplayResult(false);
               setScore(0);
             }}
           >
             OK
-          </button>
+          </MyButton>
         </div>
       ) : null}
     </div>
