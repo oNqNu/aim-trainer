@@ -109,6 +109,10 @@ button:hover {
   border-radius: 20px;
 }
 
+.result-container button {
+  margin-top: 12px;
+}
+
 .confirmed-result-button {
   margin-top: 12px;
 }
