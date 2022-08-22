@@ -5,6 +5,7 @@ import { MyButton } from './components/Mybutton/MyButton';
 
 function App() {
   const [score, setScore] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isDisplayResult, SetIsDisplayResult] = useState(false);
   const [activatedTarget, SetActivatedTarget] = useState('t1');
   const [targetPosition, SetTargetPosition] = useState({
@@ -41,7 +42,7 @@ function App() {
             changeTarget();
           }}
         >
-          {activatedTarget === 't1' && (
+          {isPlaying && activatedTarget === 't1' && (
             <div
               className="targetItem1"
               style={targetPosition}
@@ -50,7 +51,7 @@ function App() {
               }}
             ></div>
           )}
-          {activatedTarget === 't2' && (
+          {isPlaying && activatedTarget === 't2' && (
             <div
               className="targetItem2"
               style={targetPosition}
@@ -59,7 +60,7 @@ function App() {
               }}
             ></div>
           )}
-          {activatedTarget === 't3' && (
+          {isPlaying && activatedTarget === 't3' && (
             <div
               className="targetItem3"
               style={targetPosition}
@@ -67,6 +68,16 @@ function App() {
                 hundleClickTarget(3);
               }}
             ></div>
+          )}
+          {!isPlaying && (
+            <MyButton
+              onClick={() => {
+                hundleClickTarget(1);
+                setIsPlaying(true);
+              }}
+            >
+              ゲーム開始
+            </MyButton>
           )}
         </div>
         <div className="button-container">
@@ -77,7 +88,16 @@ function App() {
                 結果表示
               </MyButton>
             </>
-          ) : null}
+          ) : (
+            <MyButton
+              onClick={() => {
+                SetIsDisplayResult(false);
+                setScore(0);
+              }}
+            >
+              OK
+            </MyButton>
+          )}
         </div>
       </div>
       {isDisplayResult ? (
