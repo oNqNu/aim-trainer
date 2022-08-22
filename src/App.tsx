@@ -30,6 +30,13 @@ function App() {
     changeTarget();
   };
 
+  const hundleMissClick = () => {
+    if (!isPlaying) {
+      return;
+    }
+    setScore(score - 2);
+  };
+
   return (
     <div className="App">
       <div className="contents-container">
@@ -40,14 +47,16 @@ function App() {
           onClick={() => {
             changeTargetPosition();
             changeTarget();
+            hundleMissClick();
           }}
         >
           {isPlaying && activatedTarget === 't1' && (
             <div
               className="targetItem1"
               style={targetPosition}
-              onClick={() => {
+              onClick={(e) => {
                 hundleClickTarget(1);
+                e.stopPropagation();
               }}
             ></div>
           )}
@@ -55,8 +64,9 @@ function App() {
             <div
               className="targetItem2"
               style={targetPosition}
-              onClick={() => {
+              onClick={(e) => {
                 hundleClickTarget(2);
+                e.stopPropagation();
               }}
             ></div>
           )}
@@ -64,8 +74,9 @@ function App() {
             <div
               className="targetItem3"
               style={targetPosition}
-              onClick={() => {
+              onClick={(e) => {
                 hundleClickTarget(3);
+                e.stopPropagation();
               }}
             ></div>
           )}
@@ -88,16 +99,7 @@ function App() {
                 結果表示
               </MyButton>
             </>
-          ) : (
-            <MyButton
-              onClick={() => {
-                SetIsDisplayResult(false);
-                setScore(0);
-              }}
-            >
-              OK
-            </MyButton>
-          )}
+          ) : null}
         </div>
       </div>
       {isDisplayResult ? (
@@ -107,6 +109,7 @@ function App() {
           <MyButton
             onClick={() => {
               SetIsDisplayResult(false);
+              setIsPlaying(false);
               setScore(0);
             }}
           >
