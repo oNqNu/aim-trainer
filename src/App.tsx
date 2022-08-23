@@ -92,7 +92,7 @@ function App() {
           )}
         </div>
         <div className="button-container">
-          {!isDisplayResult ? (
+          {isPlaying && !isDisplayResult ? (
             <>
               <MyButton
                 onClick={() => {
