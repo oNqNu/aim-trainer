@@ -52,6 +52,7 @@ function App() {
     setIsDisplayResult(false);
     setIsPlaying(false);
     setScore(0);
+    setIsClickedTarget(false);
   };
 
   return (
