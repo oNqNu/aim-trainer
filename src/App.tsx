@@ -30,6 +30,12 @@ function App() {
     changeTarget();
   };
 
+  const hundleClickGameStartButton = () => {
+    setIsPlaying(true);
+    changeTargetPosition();
+    changeTarget();
+  };
+
   const hundleMissClick = () => {
     if (!isPlaying) {
       return;
@@ -81,12 +87,7 @@ function App() {
             ></div>
           )}
           {!isPlaying && (
-            <GameStartButton
-              onClick={() => {
-                hundleClickTarget(1);
-                setIsPlaying(true);
-              }}
-            />
+            <GameStartButton onClick={() => hundleClickGameStartButton()} />
           )}
         </div>
         <div className="button-container">
