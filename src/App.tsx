@@ -5,6 +5,7 @@ import { MyButton, GameStartButton } from './components/Mybutton/MyButton';
 
 function App() {
   const [score, setScore] = useState(0);
+  const [countClickedTargetInRow, setCountClickedTargetInRow] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDisplayResult, setIsDisplayResult] = useState(false);
   const [isClickedTarget, setIsClickedTarget] = useState(false);
@@ -20,6 +21,16 @@ function App() {
       top: `${Math.random() * (92 - 0)}%`,
       left: `${Math.random() * (92 - 0)}%`,
     });
+  };
+
+  const counterOfClickedTargetInRow = (isMiss = false) => {
+    if (isMiss) {
+      setCountClickedTargetInRow(0);
+      return;
+    }
+    if (!isClickedTarget) return;
+    setCountClickedTargetInRow(countClickedTargetInRow + 1);
+    console.log(countClickedTargetInRow);
   };
 
   const hundleClickTarget = (
