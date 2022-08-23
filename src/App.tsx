@@ -8,10 +8,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDisplayResult, SetIsDisplayResult] = useState(false);
   const [activatedTarget, SetActivatedTarget] = useState('t1');
-  const [targetPosition, SetTargetPosition] = useState({
-    top: '50%',
-    left: '50%',
-  });
+  const [targetPosition, SetTargetPosition] = useState({});
 
   const changeTarget = () => {
     SetActivatedTarget(`t${Math.floor(Math.random() * (4 - 1)) + 1}`);
