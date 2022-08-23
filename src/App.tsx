@@ -66,7 +66,8 @@ function App() {
     setIsClickedTarget(false);
   };
 
-  const hundleClickGameStartButton = () => {
+  const hundleExpirePreparationCountdown = () => {
+    setIsPreparation(false);
     setIsPlaying(true);
     changeTargetPosition();
     changeTarget();
@@ -122,7 +123,12 @@ function App() {
           {!(isPreparation || isPlaying) && (
             <GameStartButton onClick={() => setIsPreparation(true)} />
           )}
-          {isPreparation && <PreparationCountdownTimer />}
+          {isPreparation && (
+            <PreparationCountdownTimer
+              timer={1000 * 2}
+              onExpire={() => hundleExpirePreparationCountdown()}
+            />
+          )}
         </div>
         <div className="button-container">
           {isPlaying && !isDisplayResult ? (
