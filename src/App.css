@@ -75,6 +75,7 @@ h2 {
 }
 
 .button-container {
+  height: 80px;
   margin-top: 10px;
   display: flex;
   gap: 10px;
