@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-import { MyButton } from './components/Mybutton/MyButton';
+import { MyButton, GameStartButton } from './components/Mybutton/MyButton';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -81,14 +81,14 @@ function App() {
             ></div>
           )}
           {!isPlaying && (
-            <MyButton
+            <GameStartButton
               onClick={() => {
                 hundleClickTarget(1);
                 setIsPlaying(true);
               }}
             >
               ゲーム開始
-            </MyButton>
+            </GameStartButton>
           )}
         </div>
         <div className="button-container">
