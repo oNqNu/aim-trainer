@@ -26,18 +26,28 @@ function App() {
   const counterOfClickedTargetInRow = (isMiss = false) => {
     if (isMiss) {
       setCountClickedTargetInRow(0);
-      return;
+      console.log('miss');
+      return 0;
     }
-    if (!isClickedTarget) return;
-    setCountClickedTargetInRow(countClickedTargetInRow + 1);
-    console.log(countClickedTargetInRow);
+    if (!isClickedTarget) {
+      setCountClickedTargetInRow(1);
+      console.log('isClickedTarget is false');
+      return 1;
+    }
+    const newCount = countClickedTargetInRow + 1;
+    // console.log(newCount);
+    setCountClickedTargetInRow(newCount);
+
+    return newCount;
   };
 
   const hundleClickTarget = (
     point: number,
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    const additionalPoint = isClickedTarget ? point * 2 : point;
+    const newCount = counterOfClickedTargetInRow();
+    console.log(newCount % 4);
+    const additionalPoint = point * Math.ceil(newCount / 4);
     setScore(score + additionalPoint);
     changeTargetPosition();
     changeTarget();
@@ -49,6 +59,7 @@ function App() {
     if (!isPlaying) {
       return;
     }
+    counterOfClickedTargetInRow(true);
     setScore(score - 2);
     setIsClickedTarget(false);
   };
