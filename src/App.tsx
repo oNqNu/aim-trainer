@@ -40,6 +40,12 @@ function App() {
     changeTarget();
   };
 
+  const hundleClickConfirmResultButton = () => {
+    SetIsDisplayResult(false);
+    setIsPlaying(false);
+    setScore(0);
+  };
+
   const hundleMissClick = () => {
     if (!isPlaying) {
       return;
@@ -115,9 +121,7 @@ function App() {
           <h2>Score: {score}点</h2>
           <MyButton
             onClick={() => {
-              SetIsDisplayResult(false);
-              setIsPlaying(false);
-              setScore(0);
+              hundleClickConfirmResultButton();
             }}
           >
             OK
