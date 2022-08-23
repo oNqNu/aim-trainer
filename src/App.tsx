@@ -94,7 +94,14 @@ function App() {
         <div className="button-container">
           {!isDisplayResult ? (
             <>
-              <MyButton onClick={() => setScore(0)}>reset</MyButton>
+              <MyButton
+                onClick={() => {
+                  setScore(0);
+                  setIsPlaying(false);
+                }}
+              >
+                reset
+              </MyButton>
               <MyButton onClick={() => SetIsDisplayResult(true)}>
                 結果表示
               </MyButton>
