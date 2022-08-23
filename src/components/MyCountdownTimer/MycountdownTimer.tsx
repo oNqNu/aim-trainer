@@ -16,3 +16,19 @@ export const PreparationCountdownTimer: React.FC<ICountdownTimerParams> = ({
     </div>
   );
 };
+
+export const TimeLeftCountdownTimer: React.FC<ICountdownTimerParams> = ({
+  timer,
+  onExpire,
+}) => {
+  const { countdown, isRunning } = useCountdownTimer({
+    timer,
+    autostart: true,
+    onExpire,
+  });
+  return (
+    <div className="timeLeftCountdown">
+      {isRunning && <p>{countdown / 1000 + 1}</p>}
+    </div>
+  );
+};
