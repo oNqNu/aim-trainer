@@ -24,10 +24,14 @@ function App() {
     });
   };
 
-  const hundleClickTarget = (point: number) => {
+  const hundleClickTarget = (
+    point: number,
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     setScore(score + point);
     changeTargetPosition();
     changeTarget();
+    e.stopPropagation();
   };
 
   const hundleClickGameStartButton = () => {
@@ -61,8 +65,7 @@ function App() {
               className="targetItem1"
               style={targetPosition}
               onClick={(e) => {
-                hundleClickTarget(1);
-                e.stopPropagation();
+                hundleClickTarget(1, e);
               }}
             ></div>
           )}
@@ -71,8 +74,7 @@ function App() {
               className="targetItem2"
               style={targetPosition}
               onClick={(e) => {
-                hundleClickTarget(2);
-                e.stopPropagation();
+                hundleClickTarget(2, e);
               }}
             ></div>
           )}
@@ -81,8 +83,7 @@ function App() {
               className="targetItem3"
               style={targetPosition}
               onClick={(e) => {
-                hundleClickTarget(3);
-                e.stopPropagation();
+                hundleClickTarget(3, e);
               }}
             ></div>
           )}
