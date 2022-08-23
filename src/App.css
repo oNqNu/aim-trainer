@@ -22,6 +22,18 @@ h2 {
   font-size: 48px;
 }
 
+.sub-contents-container {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
+  min-width: 500px;
+  height: 80px;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 20px;
+}
+
 .score {
   margin-top: 12px;
 }
@@ -30,10 +42,11 @@ h2 {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  width: 50vw;
 }
 
 .playarea {
-  margin-top: 40px;
+  margin-top: 10px;
   max-height: 600px;
   max-width: 1000px;
   width: 50vw;

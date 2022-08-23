@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { MyButton, GameStartButton } from './components/Mybutton/MyButton';
-import { PreparationCountdownTimer } from './components/MyCountdownTimer/MycountdownTimer';
+import {
+  PreparationCountdownTimer,
+  TimeLeftCountdownTimer,
+} from './components/MyCountdownTimer/MycountdownTimer';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -84,7 +87,18 @@ function App() {
     <div className="App">
       <div className="contents-container">
         <h1 className="title">Aim Trainer</h1>
-        <h2 className="score">Score: {score}</h2>
+        <div className="sub-contents-container">
+          {isPlaying && (
+            <>
+              <h2 className="score">Score: {score}</h2>
+              <TimeLeftCountdownTimer
+                timer={1000 * 20}
+                onExpire={() => setIsDisplayResult(true)}
+              />
+            </>
+          )}
+        </div>
+
         <div
           className="playarea"
           onClick={() => {
