@@ -1,7 +1,10 @@
 {
+  "plugins": ["stylelint-order"],
   "rules": {
     "block-no-empty": true,
     "no-duplicate-selectors": null,
-    "number-leading-zero": "always"
+    "number-leading-zero": "always",
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-order": ["width", "height"]
   }
 }

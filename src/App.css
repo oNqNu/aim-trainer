@@ -6,8 +6,8 @@ h2 {
   color: white;
 }
 button {
-  height: 48px;
   width: 120px;
+  height: 48px;
   border-radius: 10px;
   background-color: rgb(30, 168, 15);
   border: 2.5px solid rgb(30, 168, 15);
@@ -25,8 +25,8 @@ button:hover {
 .App {
   text-align: center;
   background-color: rgb(60, 64, 65);
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,8 +63,8 @@ button:hover {
 
 .targetItem1 {
   background-color: brown;
-  height: 30px;
   width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -72,8 +72,8 @@ button:hover {
 
 .targetItem2 {
   background-color: rgb(32, 171, 48);
-  height: 24px;
   width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -81,8 +81,8 @@ button:hover {
 
 .targetItem3 {
   background-color: rgb(31, 10, 192);
-  height: 16px;
   width: 16px;
+  height: 16px;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -100,8 +100,8 @@ button:hover {
   position: fixed;
   top: 50% - 80px;
   left: 50% - 150px;
-  height: 300px;
   width: 500px;
+  height: 300px;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(8px);
