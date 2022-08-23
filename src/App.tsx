@@ -26,7 +26,8 @@ function App() {
     point: number,
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    setScore(score + point);
+    const additionalPoint = isClickedTarget ? point * 2 : point;
+    setScore(score + additionalPoint);
     changeTargetPosition();
     changeTarget();
     setIsClickedTarget(true);
