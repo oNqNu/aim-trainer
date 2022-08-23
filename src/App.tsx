@@ -10,6 +10,7 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDisplayResult, setIsDisplayResult] = useState(false);
   const [isClickedTarget, setIsClickedTarget] = useState(false);
+  const [isPreparation, setIsPreparation] = useState(false);
   const [activatedTarget, setActivatedTarget] = useState('t1');
   const [targetPosition, setTargetPosition] = useState({});
 
@@ -81,7 +82,6 @@ function App() {
   return (
     <div className="App">
       <div className="contents-container">
-        <PreparationCountdownTimer />
         <h1 className="title">Aim Trainer</h1>
         <h2 className="score">Score: {score}</h2>
         <div
@@ -119,9 +119,10 @@ function App() {
               }}
             ></div>
           )}
-          {!isPlaying && (
-            <GameStartButton onClick={() => hundleClickGameStartButton()} />
+          {!(isPreparation || isPlaying) && (
+            <GameStartButton onClick={() => setIsPreparation(true)} />
           )}
+          {isPreparation && <PreparationCountdownTimer />}
         </div>
         <div className="button-container">
           {isPlaying && !isDisplayResult ? (
