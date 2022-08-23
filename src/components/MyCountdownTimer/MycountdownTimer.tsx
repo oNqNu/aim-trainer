@@ -1,4 +1,5 @@
 import { useCountdownTimer, ICountdownTimerParams } from 'use-countdown-timer';
+import './MycountdownTimer.css';
 
 export const PreparationCountdownTimer: React.FC<ICountdownTimerParams> = ({
   timer,
@@ -11,7 +12,7 @@ export const PreparationCountdownTimer: React.FC<ICountdownTimerParams> = ({
   });
   return (
     <div className="preparationCountdown">
-      {isRunning && <div>{countdown / 1000 + 1}</div>}
+      {isRunning && <p>{countdown / 1000 + 1}</p>}
     </div>
   );
 };
