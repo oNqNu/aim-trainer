@@ -11,6 +11,8 @@ h2 {
   background-color: rgb(60, 64, 65);
   width: 100vw;
   height: 100vh;
+  min-width: 800px;
+  min-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
