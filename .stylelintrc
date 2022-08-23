@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "block-no-empty": true,
+    "no-duplicate-selectors": null,
+    "number-leading-zero": "always"
+  }
+}
