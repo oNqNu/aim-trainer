@@ -86,9 +86,7 @@ function App() {
                 hundleClickTarget(1);
                 setIsPlaying(true);
               }}
-            >
-              ゲーム開始
-            </GameStartButton>
+            />
           )}
         </div>
         <div className="button-container">

@@ -13,10 +13,10 @@ export const MyButton: FC<Props> = ({ children, onClick, ...props }) => {
   );
 };
 
-export const GameStartButton: FC<Props> = ({ children, onClick, ...props }) => {
+export const GameStartButton: FC<Props> = ({ onClick, ...props }) => {
   return (
     <button className="gameStartButton" onClick={onClick} {...props}>
-      {children}
+      ゲーム開始
     </button>
   );
 };
