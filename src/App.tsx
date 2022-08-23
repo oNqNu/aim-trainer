@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { MyButton, GameStartButton } from './components/Mybutton/MyButton';
+import { PreparationCountdownTimer } from './components/MyCountdownTimer/MycountdownTimer';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -80,6 +81,7 @@ function App() {
   return (
     <div className="App">
       <div className="contents-container">
+        <PreparationCountdownTimer />
         <h1 className="title">Aim Trainer</h1>
         <h2 className="score">Score: {score}</h2>
         <div
