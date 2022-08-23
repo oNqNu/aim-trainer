@@ -28,7 +28,7 @@ export const TimeLeftCountdownTimer: React.FC<ICountdownTimerParams> = ({
   });
   return (
     <div className="timeLeftCountdown">
-      {isRunning && <p>{countdown / 1000 + 1}</p>}
+      {isRunning && <p>{countdown / 1000}</p>}
     </div>
   );
 };
