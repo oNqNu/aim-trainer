@@ -7,6 +7,7 @@ function App() {
   const [score, setScore] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDisplayResult, setIsDisplayResult] = useState(false);
+  const [isClickedTarget, setIsClickedTarget] = useState(null);
   const [activatedTarget, setActivatedTarget] = useState('t1');
   const [targetPosition, setTargetPosition] = useState({});
 
