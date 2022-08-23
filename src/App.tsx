@@ -6,16 +6,16 @@ import { MyButton, GameStartButton } from './components/Mybutton/MyButton';
 function App() {
   const [score, setScore] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isDisplayResult, SetIsDisplayResult] = useState(false);
-  const [activatedTarget, SetActivatedTarget] = useState('t1');
-  const [targetPosition, SetTargetPosition] = useState({});
+  const [isDisplayResult, setIsDisplayResult] = useState(false);
+  const [activatedTarget, setActivatedTarget] = useState('t1');
+  const [targetPosition, setTargetPosition] = useState({});
 
   const changeTarget = () => {
-    SetActivatedTarget(`t${Math.floor(Math.random() * (4 - 1)) + 1}`);
+    setActivatedTarget(`t${Math.floor(Math.random() * (4 - 1)) + 1}`);
   };
 
   const changeTargetPosition = () => {
-    SetTargetPosition({
+    setTargetPosition({
       top: `${Math.random() * (92 - 0)}%`,
       left: `${Math.random() * (92 - 0)}%`,
     });
@@ -38,7 +38,7 @@ function App() {
   };
 
   const hundleClickConfirmResultButton = () => {
-    SetIsDisplayResult(false);
+    setIsDisplayResult(false);
     setIsPlaying(false);
     setScore(0);
   };
@@ -105,7 +105,7 @@ function App() {
               >
                 reset
               </MyButton>
-              <MyButton onClick={() => SetIsDisplayResult(true)}>
+              <MyButton onClick={() => setIsDisplayResult(true)}>
                 結果表示
               </MyButton>
             </>
