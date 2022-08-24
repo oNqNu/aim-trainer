@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import './App.css';
 
 import { MyButton, GameStartButton } from './components/Mybutton/MyButton';
@@ -83,6 +83,16 @@ function App() {
     setIsClickedTarget(false);
   };
 
+  const timeLeftCountdownTimer = useMemo(
+    () => (
+      <TimeLeftCountdownTimer
+        timer={1000 * 20}
+        onExpire={() => setIsDisplayResult(true)}
+      />
+    ),
+    []
+  );
+
   return (
     <div className="App">
       <div className="contents-container">
@@ -91,10 +101,7 @@ function App() {
           {isPlaying && (
             <>
               <h2 className="score">Score: {score}</h2>
-              <TimeLeftCountdownTimer
-                timer={1000 * 20}
-                onExpire={() => setIsDisplayResult(true)}
-              />
+              {timeLeftCountdownTimer}
             </>
           )}
         </div>
