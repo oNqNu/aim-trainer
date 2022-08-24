@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aim-trainer/static/css/main.91ce2cb9.css",
+    "main.js": "/aim-trainer/static/js/main.8d72b464.js",
+    "index.html": "/aim-trainer/index.html",
+    "main.91ce2cb9.css.map": "/aim-trainer/static/css/main.91ce2cb9.css.map",
+    "main.8d72b464.js.map": "/aim-trainer/static/js/main.8d72b464.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91ce2cb9.css",
+    "static/js/main.8d72b464.js"
+  ]
+}
