@@ -32,6 +32,7 @@ function App() {
     if (isMiss) {
       setCountClickedTargetInRow(0);
       console.log('miss');
+      console.log('miss');
       return 0;
     }
     if (!isClickedTarget) {
