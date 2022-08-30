@@ -7,3 +7,4 @@ subject.next(1);
 
 subject.subscribe(console.error);
 subject.next(2);
+subject.next(3);
