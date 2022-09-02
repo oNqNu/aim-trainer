@@ -18,5 +18,5 @@ setTimeout(() => {
   setTimeout(() => {
     console.log('unsubscribe parent');
     subscription.unsubscribe(); // 子は破棄される
-  }, 1500);
+  }, 1600);
 }, 1000);
